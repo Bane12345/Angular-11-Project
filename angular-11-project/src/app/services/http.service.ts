@@ -11,8 +11,8 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 
-  getGameList(ordering: string, search?: string):Observable<APIResponse<Game>{
-    let params = new HttpParams().set('odrering', ordering);
+  getGameList(ordering: string, search?: string):Observable<APIResponse<Game>>{
+    let params = new HttpParams().set('ordering', ordering);
 
     if(search){
       params = new HttpParams().set('ordering', ordering).set('search', search);
